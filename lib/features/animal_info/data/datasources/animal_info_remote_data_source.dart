@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:animals/features/animal_info/data/models/animal_info_model.dart';
+import '../models/animal_info_model.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../../core/error/exceptions.dart';

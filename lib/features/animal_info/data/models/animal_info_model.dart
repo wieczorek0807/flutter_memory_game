@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-import 'package:animals/features/animal_info/domain/entities/animal_info.dart';
+import '../../domain/entities/animal_info.dart';
 
 class AnimalInfoModel extends AnimalInfoEntity {
   AnimalInfoModel(

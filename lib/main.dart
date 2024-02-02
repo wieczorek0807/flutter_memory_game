@@ -1,3 +1,4 @@
+import 'package:animals/core/app_fonts.dart';
 import 'package:flutter/services.dart';
 
 import 'presentation/menu_screen/page/main_menu_page.dart';
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: 'Memory',
-      // home: const MainMenuPage(),
-      theme: ThemeData(fontFamily: 'Staatliches'),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: AppFonts.staatliches),
       initialRoute: '/',
       routes: {
         '/': (context) => const MainMenuPage(),

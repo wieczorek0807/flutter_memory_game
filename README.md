@@ -1,17 +1,16 @@
-# animals
+# FLUTTER MEMORY GAME
 
-A new Flutter project.
+Simple memory game, created for student project.
+Memory game app created as part of a student project. The application is primarily designed for mobile devices. The game offers an interactive experience where players match pairs of cards.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Board size selection: Players can choose the size of the game board before starting, allowing them to adjust the difficulty level according to their skills.
+- Attempt Count Tracking: The app keeps track of the number of attempts players make while searching for matching pairs.
 
-A few resources to get you started if this is your first Flutter project:
+## Live Demo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[Memory Game Demo Link](https://wieczorek0807.github.io/flutter_memory_game/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Animals-Flutter" 
+## App Preview
+![Gradient screen](images\memory-game.png)

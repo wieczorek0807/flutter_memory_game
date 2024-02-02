@@ -35,12 +35,11 @@ dependencies:
   flutter:
     sdk: flutter
   freezed: ^2.2.1
-  google_fonts: ^3.0.1
-  http: ^0.13.5
+  http: ^1.1.0
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.11.0
-  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
 
@@ -69,7 +68,7 @@ flutter:
   fonts:
     - family: Staatliches
       fonts:
-        - asset: lib\core\fonts\Staatliches-Regular.ttf
+        - asset: assets\fonts\Staatliches-Regular.ttf
     #     - asset: fonts/Schyler-Italic.ttf
     #       style: italic
     # - family: Trajan Pro

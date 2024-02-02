@@ -27,17 +27,20 @@ class _GamePageState extends State<GamePage> {
     return Scaffold(
       backgroundColor: const Color(0xFF363d98),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.80,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 10.0,
-                ),
-                child: Container(
+        child: Container(
+          constraints: const BoxConstraints(
+            maxWidth: 500.0,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.80,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 10.0,
+                  ),
                   child: Center(
                     child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -49,8 +52,7 @@ class _GamePageState extends State<GamePage> {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () async {
-                              if (!widget.game.gameCardList[index].isFlipped &&
-                                  !widget.operation) {
+                              if (!widget.game.gameCardList[index].isFlipped && !widget.operation) {
                                 if (widget.game.secondCardId != 2137) {
                                   widget.operation = true;
                                 }
@@ -58,37 +60,31 @@ class _GamePageState extends State<GamePage> {
                                   widget.game.flipCard(index);
                                   setState(() {});
 
-                                  await Future.delayed(
-                                      const Duration(seconds: 1));
+                                  await Future.delayed(const Duration(seconds: 1));
                                   widget.game.compareCards();
                                   setState(() {});
                                   widget.operation = false;
                                 }
                               }
-                              if (widget.game.score ==
-                                  widget.x * widget.y / 2) {
+                              if (widget.game.score == widget.x * widget.y / 2) {
+                                // ignore: use_build_context_synchronously
                                 showDialog<String>(
                                     context: context,
-                                    builder: (BuildContext context) =>
-                                        AlertDialog(
+                                    builder: (BuildContext context) => AlertDialog(
                                             title: const Text(
                                               'Wygrana',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(fontSize: 30),
                                             ),
-                                            content: Text(
-                                                "Gratulacje wygrałeś grę wykonując ${widget.game.moves.toString()} ruchów."),
+                                            content: Text("Gratulacje wygrałeś grę wykonując ${widget.game.moves.toString()} ruchów."),
                                             actions: <Widget>[
                                               TextButton(
                                                 onPressed: () {
-                                                  Navigator.popUntil(context,
-                                                      ModalRoute.withName('/'));
+                                                  Navigator.popUntil(context, ModalRoute.withName('/'));
                                                 },
                                                 child: const Text(
                                                   'Wróć do menu',
-                                                  style: TextStyle(
-                                                      color: Color(0xFF363d98),
-                                                      fontSize: 20),
+                                                  style: TextStyle(color: Color(0xFF363d98), fontSize: 20),
                                                   textAlign: TextAlign.center,
                                                 ),
                                               )
@@ -97,8 +93,7 @@ class _GamePageState extends State<GamePage> {
                             },
                             child: Container(
                                 padding: const EdgeInsets.all(8),
-                                color:
-                                    widget.game.gameCardList[index].getColor(),
+                                color: widget.game.gameCardList[index].getColor(),
                                 child: FittedBox(
                                     child: Icon(
                                   widget.game.gameCardList[index].getIconData(),
@@ -108,20 +103,20 @@ class _GamePageState extends State<GamePage> {
                   ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                ScoreBoard(
-                  score: widget.game.moves,
-                  title: "Próby",
-                ),
-                ScoreBoard(
-                  score: widget.game.score,
-                  title: "Wynik",
-                ),
-              ],
-            ),
-          ],
+              Row(
+                children: [
+                  ScoreBoard(
+                    score: widget.game.moves,
+                    title: "Próby",
+                  ),
+                  ScoreBoard(
+                    score: widget.game.score,
+                    title: "Wynik",
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

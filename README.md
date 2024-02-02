@@ -13,4 +13,4 @@ Memory game app created as part of a student project. The application is primari
 [Memory Game Demo Link](https://wieczorek0807.github.io/flutter_memory_game/)
 
 ## App Preview
-![Gradient screen](images\memory-game.png)
+![Gradient screen](images/memory-game.png)

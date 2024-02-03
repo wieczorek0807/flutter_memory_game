@@ -1,6 +1,5 @@
 # FLUTTER MEMORY GAME
 
-Simple memory game, created for student project.
 Memory game app created as part of a student project. The application is primarily designed for mobile devices. The game offers an interactive experience where players match pairs of cards.
 
 ## Features

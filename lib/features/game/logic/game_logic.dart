@@ -1,4 +1,4 @@
-import 'package:animals/core/logic/game_card.dart';
+import 'package:animals/features/game/logic/game_card.dart';
 import 'package:flutter/material.dart';
 
 class GameLogic {
@@ -40,8 +40,7 @@ class GameLogic {
 
   void gameLogicInit() {
     gameCardList = List.generate(cardCount, (index) {
-      return GameCard(
-          gameCardIcon: iconList[index], isFlipped: false, isGuessed: false);
+      return GameCard(gameCardIcon: iconList[index], isFlipped: false, isGuessed: false);
     });
     gameCardList.shuffle();
   }

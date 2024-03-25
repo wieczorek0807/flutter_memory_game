@@ -1,3 +1,5 @@
+import 'package:animals/core/styles/styles.dart';
+import 'package:animals/core/values/values.dart';
 import 'package:flutter/material.dart';
 
 class ScoreBoard extends StatelessWidget {
@@ -9,28 +11,16 @@ class ScoreBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        decoration: const BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: AppColors.primaryLight),
         margin: const EdgeInsets.all(15),
         padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 10.0),
         child: Column(
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                color: Color(0xff292a29),
-                fontSize: 25,
-              ),
-            ),
+            Text(title, style: TextStyles.scoreBoardTitle),
             const SizedBox(
-              height: 8,
+              height: AppDimensions.scoreBoardSpace,
             ),
-            Text(
-              score.toString(),
-              style: const TextStyle(
-                color: Color(0xff292a29),
-                fontSize: 35,
-              ),
-            )
+            Text(score.toString(), style: TextStyles.scoreBoardValue)
           ],
         ),
       ),

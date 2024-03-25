@@ -7,10 +7,7 @@ class GameCard extends Equatable {
   bool isFlipped;
   bool isGuessed;
 
-  GameCard(
-      {required this.gameCardIcon,
-      required this.isFlipped,
-      required this.isGuessed});
+  GameCard({required this.gameCardIcon, required this.isFlipped, required this.isGuessed});
 
   void turnAround() {
     if (isGuessed == false) {
@@ -30,7 +27,7 @@ class GameCard extends Equatable {
 
   Color getColor() {
     if (isGuessed) {
-      return const Color.fromARGB(255, 167, 241, 103);
+      return const Color(0xFFA7F167);
     } else if (isFlipped) {
       return const Color(0xfffee36e);
     }

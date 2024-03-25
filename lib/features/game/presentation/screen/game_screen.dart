@@ -1,7 +1,7 @@
 import 'package:animals/core/logic/game_logic.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/score_board.dart';
+import '../widget/score_board.dart';
 
 // ignore: must_be_immutable
 class GamePage extends StatefulWidget {

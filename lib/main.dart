@@ -1,7 +1,7 @@
-import 'package:animals/core/app_fonts.dart';
 import 'package:flutter/services.dart';
 
-import 'presentation/menu_screen/page/main_menu_page.dart';
+import 'core/values/values.dart';
+import 'features/menu/presentation/screen/menu_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: AppFonts.staatliches),
       initialRoute: '/',
       routes: {
-        '/': (context) => const MainMenuPage(),
+        '/': (context) => const MenuScreen(),
       },
     );
   }

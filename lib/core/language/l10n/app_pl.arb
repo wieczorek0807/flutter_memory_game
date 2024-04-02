@@ -1,0 +1,9 @@
+{
+  "appTitle" : "memory",
+  "menuText": "Aby rozpocząć grę, wybierz wielkość planszy:",
+  "attempts" : "próby",
+  "score" : "wynik",
+  "congratulations" : "Gratulacje!",
+  "scoreMessage" : "Wygrałeś grę wykonując {attempts} ruchów.\nZdobyłeś {score} punktów.",
+  "backToMenu" : "Powrót do menu"
+}

@@ -1,6 +1,6 @@
-import 'package:animals/core/values/values.dart';
-import 'package:animals/features/menu/presentation/widget/logo.dart';
-import 'package:animals/features/menu/presentation/widget/menu.dart';
+import 'package:memory_game/core/presentation/values/values.dart';
+import 'package:memory_game/features/menu/presentation/widget/logo.dart';
+import 'package:memory_game/features/menu/presentation/widget/menu.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -15,7 +15,8 @@ class MenuScreen extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Logo(),
             SizedBox(
-              height: AppDimensions.menuItemSpace,
+              height: AppDimensions.menuItemSpaceHeight,
+              width: AppDimensions.menuItemSpaceWidth,
             ),
             Menu(),
           ]),

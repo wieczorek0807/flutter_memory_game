@@ -1,0 +1,9 @@
+{
+  "appTitle" : "memory",
+  "menuText": "To start the game, select the board size:",
+  "attempts" : "attempts",
+  "score" : "score",
+  "congratulations" : "congratulations!",
+  "scoreMessage" : "You won the game by making {attempts} moves. \nYou scored {score} point.",
+  "backToMenu" : "Back to menu"
+}
